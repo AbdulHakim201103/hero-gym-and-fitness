@@ -1,9 +1,14 @@
 import React from "react";
 import "./Login.css";
 import google from "../../../images/google.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate =useNavigate()
+
+  const navigateRegister = () =>{
+    navigate('/register')
+  }
   return (
     <div className=" container my-5 ">
       <div className="form-container w-75 m-auto">
@@ -26,7 +31,7 @@ const Login = () => {
         <div className="w-50 m-auto my-3">
           <p className="text-center">
             New to Hero Gym?
-            <Link className="link-btn" to="/register">
+            <Link className="link-btn" onClick={navigateRegister} to="/register">
               Create an Account
             </Link>
           </p>
