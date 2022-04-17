@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "type": "Basic Plan",
+      "prices":"49",
+      "wifi":"Get Free Wifi",
+      "health":"No Gym and Cardio",
+      "service":"No Service Locker Rooms"
+    },
+    {
+      "id": "2",
+      "type": "Advance Plan",
+      "prices":"69",
+      "wifi":"Get Free Wifi",
+      "health":"Gym and Cardio",
+      "service":"No Service Locker Rooms"
+    },
+    {
+      "id": "3",
+      "type": "Premium Plan",
+      "prices":"99",
+      "wifi":"Get Free Wifi",
+      "health":"Gym and Cardio",
+      "service":"Service Locker Rooms"
+    }
+  ]

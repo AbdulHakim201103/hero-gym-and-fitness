@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div>
-      <Navbar bg="White" sticky="top" expand="lg">
+      <Navbar bg="light" sticky="top" expand="lg">
         <Container>
           <Navbar.Brand as={Link} to="/">
             <img src={logo} height="40px" alt="" />
@@ -35,7 +34,6 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
   );
 };
 

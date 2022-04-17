@@ -24,7 +24,7 @@ const Banner = () => {
           />
           <Carousel.Caption>
             <h1>Healthy Body-Healthy Life !!!</h1>
-            <Link className="btn btn-danger my-5"  to="/checkout">Contact Me</Link>
+            <Link className="btn btn-danger my-2"  to="/checkout">Contact Me</Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -36,7 +36,7 @@ const Banner = () => {
 
           <Carousel.Caption>
             <h1>Reach Your Potential !!!</h1>
-            <Link className="btn btn-danger my-5"  to="/checkout">Contact Me</Link>
+            <Link className="btn btn-danger my-2"  to="/checkout">Contact Me</Link>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -48,7 +48,7 @@ const Banner = () => {
 
           <Carousel.Caption>
             <h1>Healthy & Fit With Coach !!!</h1>
-            <Link className="btn btn-danger my-5"  to="/checkout">Contact Me</Link>
+            <Link className="btn btn-danger my-2"  to="/checkout">Contact Me</Link>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

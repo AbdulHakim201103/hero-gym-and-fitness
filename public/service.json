@@ -1,0 +1,23 @@
+[
+    {
+        
+        "id":"1",
+        "name":"Fitness Training",
+        "img":"Fitness Training",
+        "description":"Fitness Training"
+        
+    },
+    {
+        "id":"2",
+        "name":"Cardio Training",
+        "img":"Fitness Training",
+        "description":"Fitness Training"
+    },
+    {
+        "id":"3",
+        "name":"Strength Exercises",
+        "img":"Fitness Training",
+        "description":"Fitness Training"
+    }
+
+]
