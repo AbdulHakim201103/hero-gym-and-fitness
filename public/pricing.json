@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "type": "Basic Plan",
+      "type": "Basic",
       "prices":"49",
       "wifi":"Get Free Wifi",
       "health":"No Gym and Cardio",
@@ -9,7 +9,7 @@
     },
     {
       "id": "2",
-      "type": "Advance Plan",
+      "type": "Advance",
       "prices":"69",
       "wifi":"Get Free Wifi",
       "health":"Gym and Cardio",
@@ -17,7 +17,7 @@
     },
     {
       "id": "3",
-      "type": "Premium Plan",
+      "type": "Premium",
       "prices":"99",
       "wifi":"Get Free Wifi",
       "health":"Gym and Cardio",

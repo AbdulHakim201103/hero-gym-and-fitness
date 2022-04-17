@@ -1,0 +1,18 @@
+.services-page-container{
+    padding: 30px;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-gap: 30px;
+}
+
+/* make services responsive */
+@media screen and (max-width:576px){
+    .services-container{
+        grid-template-columns: repeat(1, 1fr);
+    } 
+    .services-page-container{
+        padding: 5px;
+    }  
+}

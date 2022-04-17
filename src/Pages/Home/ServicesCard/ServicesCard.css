@@ -1,0 +1,19 @@
+.service{
+    border: 1px solid rgb(147, 145, 145);
+    border-radius: 15px;
+    box-shadow: -3px 3px gray;
+    
+}
+.service img{
+    border-radius:15px 15px 0 0;
+    width: 100%;
+}
+.service-info{
+    padding: 15px;
+}
+.service-info h2{
+    color: rgb(255, 0, 0);
+}
+.service-info h4{
+    color: cadetblue;
+}

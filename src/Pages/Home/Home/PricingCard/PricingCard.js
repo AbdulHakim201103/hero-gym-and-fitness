@@ -8,7 +8,7 @@ const PricingCard = ({ price }) => {
     <div className="pricing-div bg-light">
       <div className="pricing-info text-center">
         <h2>{type}</h2>
-        <h4>${prices}</h4>
+        <h4>${prices} <small>/mo</small></h4>
         <p>{wifi}</p>
         <p>{health}</p>
         <p>{service}</p>
