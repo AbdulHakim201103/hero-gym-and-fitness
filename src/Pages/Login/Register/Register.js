@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import google from "../../../images/google.png";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import "./Register.css";
@@ -18,7 +17,13 @@ const Register = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
-
+  if (error) {
+    return (
+      <div>
+        <p className="text-danger text-center">Error: {error.message}</p>
+      </div>
+    );
+  }
 
   if (user) {
     navigate('/home');

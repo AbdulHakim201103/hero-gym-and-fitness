@@ -11,7 +11,7 @@ const Login = () => {
   const navigate =useNavigate()
   const location = useLocation()
   let from = location.state?.from?.pathname || "/";
-
+  let errorElement;
   const [
     signInWithEmailAndPassword,
     user,
@@ -19,6 +19,13 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
+  if (error) {
+    
+    errorElement = <div>
+        <p className="text-danger text-center">Error: {error.message}</p>
+      </div>
+   
+  }
 
   if (user) {
     navigate(from, { replace: true })
@@ -49,6 +56,7 @@ const Login = () => {
             placeholder="Password"
             required
           />
+          {errorElement}
           <input className="d-block btn btn-primary w-100" type="submit" value="Login" />
         </form>
         <div className="w-50 m-auto my-3">
