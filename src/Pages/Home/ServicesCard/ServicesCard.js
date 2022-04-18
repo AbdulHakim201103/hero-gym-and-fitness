@@ -10,7 +10,7 @@ const ServicesCard = ({ service }) => {
       <div className="service-info">
         <h2 className="text-center">{name}</h2>
         <p>{description}</p>
-        <p className="text-success">Service Price: <span className="text-danger fs-1">{price}</span>/mo</p>
+        <p className="text-success">Service Price: ${price} <small>/mo</small></p>
         <div className="d-flex justify-content-center align-content-center">
           <Link className="btn btn-danger my-2" to="/checkout">
             Book Now
