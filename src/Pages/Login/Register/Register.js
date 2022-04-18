@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
@@ -28,6 +27,7 @@ const Register = () => {
   if (error) {
     errorElement = <p className="text-danger text-center">Error: {error?.message}</p>;
   }
+  
   if (loading || updating) {
     loadingElement = (
       <p className="text-center">
