@@ -26,7 +26,7 @@ const Login = () => {
   if (error) {
     errorElement = <p className="text-danger text-center">Error: {error?.message}</p>;
   }
-  if (loading) {
+  if (loading || sending) {
     loadingElement = (
       <p className="text-center">
         <Spinner animation="grow" variant="info" />

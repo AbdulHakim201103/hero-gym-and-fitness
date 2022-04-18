@@ -3,7 +3,7 @@
         
         "id":"1",
         "name":"Fitness Training",
-        "price":"39.99",
+        "price":"39",
         "img":"https://i.ibb.co/bRjxfRj/service1.webp",
         "description":"Fitness training is a combination of regular physical exercises and a healthy diet. Besides giving you the body you want, fitness training also prolongs your life and provides you with some mental benefits"
         
@@ -11,14 +11,14 @@
     {
         "id":"2",
         "name":"Cardio Training",
-        "price":"49.99",
+        "price":"49",
         "img":"https://i.ibb.co/X4cGp3f/service2.webp",
         "description":"Cardiovascular training, also known as aerobic training, is any form of exercise that elevates the heart rate due to the repeated contraction of muscles while utilizing the aerobic and even, at times, the anaerobic energy system."
     },
     {
         "id":"3",
         "name":"Strength Exercises",
-        "price":"59.99",
+        "price":"59",
         "img":"https://i.ibb.co/SPkyk8X/service3.webp",
         "description":"Some other examples of pushing exercises include squats, standing overhead presses, push-ups, dips, bench presses, barbell box step-ups, and glute bridges. Common pulling exercises include rows, pull-ups, and lat pull-downs."
     }
