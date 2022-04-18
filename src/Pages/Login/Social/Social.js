@@ -4,6 +4,7 @@ import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import "./Social.css";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Spinner } from "react-bootstrap";
 
 const Social = () => {
   const navigate = useNavigate();
@@ -11,12 +12,13 @@ const Social = () => {
   let from = location.state?.from?.pathname || "/";
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
   let errorElement;
+  let loadingElement;
 
   if (error) {
-    errorElement =<div>
-      <p className="text-danger text-center">Error: {error.message}</p>
-      </div>
-    
+    errorElement =<p className="text-danger text-center">Error: {error?.message}</p>  
+  }
+  if (loading) {
+     loadingElement=<p className="text-center"><Spinner animation="grow" variant="info" /></p>;
   }
   if (user) {
     navigate(from, { replace: true });
@@ -29,6 +31,7 @@ const Social = () => {
         <div className="right ms-3"></div>
       </div>
       {errorElement}
+      {loadingElement}
       <div className="w-50 m-auto">
         <button onClick={() => signInWithGoogle()} className="btn border border-danger mb-5 w-100">
           <img className="me-3" src={google} width="30px" alt="" /> Continue With Google

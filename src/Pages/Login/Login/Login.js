@@ -1,42 +1,59 @@
 import React, { useRef } from "react";
-import "./Login.css"
+import "./Login.css";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Social from "../Social/Social";
+import { Spinner } from "react-bootstrap";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 
 const Login = () => {
-  const emailRef = useRef('')
-  const passwordRef = useRef('')
-  const navigate =useNavigate()
-  const location = useLocation()
+  const emailRef = useRef("");
+  const passwordRef = useRef("");
+  const navigate = useNavigate();
+  const location = useLocation();
   let from = location.state?.from?.pathname || "/";
   let errorElement;
-  const [
-    signInWithEmailAndPassword,
-    user,
-    loading,
-    error,
-  ] = useSignInWithEmailAndPassword(auth);
+  let loadingElement;
 
+  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   if (error) {
-    
-    errorElement = <div>
-        <p className="text-danger text-center">Error: {error.message}</p>
-      </div>
-   
+    errorElement = <p className="text-danger text-center">Error: {error?.message}</p>;
+  }
+  if (loading) {
+    loadingElement = (
+      <p className="text-center">
+        <Spinner animation="grow" variant="info" />
+      </p>
+    );
   }
 
   if (user) {
-    navigate(from, { replace: true })
+    navigate(from, { replace: true });
   }
-  const handleSubmit =event =>{
+  const resetPassword = async () => {
+    const email = emailRef.current.value;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    }
+    else{
+      toast('Please enter your email address')
+    }
+  };
+  const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    signInWithEmailAndPassword(email, password)
-  }
+    signInWithEmailAndPassword(email, password);
+  };
   return (
     <div className=" container my-5 ">
       <div className="form-container w-75 m-auto">
@@ -57,6 +74,7 @@ const Login = () => {
             required
           />
           {errorElement}
+          {loadingElement}
           <input className="d-block btn btn-primary w-100" type="submit" value="Login" />
         </form>
         <div className="w-50 m-auto my-3">
@@ -67,7 +85,16 @@ const Login = () => {
             </Link>
           </p>
         </div>
+        <div className="w-50 m-auto my-3">
+          <p className="text-center">
+            Forget Password?
+            <button className="btn text-decoration-none btn-link" onClick={resetPassword}>
+              Reset Password
+            </button>
+          </p>
+        </div>
         <Social></Social>
+        <ToastContainer />
       </div>
     </div>
   );
