@@ -3,7 +3,7 @@
         
         "id":"1",
         "name":"Fitness Training",
-        "price":"49.99",
+        "price":"39.99",
         "img":"https://i.ibb.co/bRjxfRj/service1.webp",
         "description":"Fitness training is a combination of regular physical exercises and a healthy diet. Besides giving you the body you want, fitness training also prolongs your life and provides you with some mental benefits"
         
@@ -18,7 +18,7 @@
     {
         "id":"3",
         "name":"Strength Exercises",
-        "price":"49.99",
+        "price":"59.99",
         "img":"https://i.ibb.co/SPkyk8X/service3.webp",
         "description":"Some other examples of pushing exercises include squats, standing overhead presses, push-ups, dips, bench presses, barbell box step-ups, and glute bridges. Common pulling exercises include rows, pull-ups, and lat pull-downs."
     }
