@@ -7,9 +7,9 @@ const NotFound = () => {
   return (
     <div>
       <div className="d-flex justify-content-center align-items-center">
-        <img src={notfound} alt="" />
+        <img className="container-fluid" src={notfound} alt="" />
       </div>
-      <div className="d-flex justify-content-center align-items-center">
+      <div className="d-flex justify-content-center my-5 align-items-center">
         <Link className="btn btn-success " to="/">
           Go to Home
         </Link>
