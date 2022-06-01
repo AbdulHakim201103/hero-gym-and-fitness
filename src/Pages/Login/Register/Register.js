@@ -7,7 +7,6 @@ import auth from "../../../firebase.init";
 import "./Register.css";
 import Social from "../Social/Social";
 import { Spinner } from "react-bootstrap";
-import { sendEmailVerification } from "firebase/auth";
 
 const Register = () => {
   const [agree, setAgree] = useState(false);
@@ -81,12 +80,12 @@ const Register = () => {
           {loadingElement}
           <div className="my-3">
             <input
-              onClick={() => setAgree(!agree)}
               ref={termsRef}
               className="me-3"
               type="checkbox"
               name="terms"
               id="terms"
+              onClick={() => setAgree(!agree)}
             />
             <label className={agree ? "text-primary" : "text-danger"} htmlFor="terms">
               Accept Terms and conditions
